@@ -122,7 +122,7 @@ export default function PlayerBar() {
             boxShadow: '0 -2px 10px rgba(0,0,0,0.5)',
         }}>
             <audio ref={audioRef} onEnded={handleNext}>
-                <source src={`lorelei-music-production.up.railway.app${current.audioUrl}`} type="audio/mpeg" />
+                <source src={`https://lorelei-music-production.up.railway.app${current.audioUrl}`} type="audio/mpeg" />
             </audio>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
