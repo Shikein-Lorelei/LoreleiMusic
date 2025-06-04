@@ -14,7 +14,7 @@ export const SongProvider = ({ children }) => {
 
     // Ambil semua lagu dari server
     const fetchAllSongs = () => {
-        fetch('http://localhost:5000/api/songs')
+        fetch('lorelei-music-production.up.railway.app/api/songs')
             .then((res) => res.json())
             .then(setAllSongs)
             .catch(console.error);
@@ -196,7 +196,7 @@ export const SongProvider = ({ children }) => {
     // Fungsi untuk edit lagu
     const editSong = async (songId, updatedData) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/songs/${songId}`, {
+            const response = await fetch(`lorelei-music-production.up.railway.app/api/songs/${songId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -235,7 +235,7 @@ export const SongProvider = ({ children }) => {
     // Fungsi untuk hapus lagu
     const deleteSong = async (songId) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/songs/${songId}`, {
+            const response = await fetch(`lorelei-music-production.up.railway.app/api/songs/${songId}`, {
                 method: 'DELETE',
             });
 

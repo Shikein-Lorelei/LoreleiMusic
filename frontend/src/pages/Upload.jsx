@@ -51,7 +51,7 @@ function Upload() {
             form.append('artist', artist.trim());
             form.append('audio', audio);
 
-            await axios.post('http://localhost:5000/api/songs', form);
+            await axios.post('lorelei-music-production.up.railway.app/api/songs', form);
             await fetchAllSongs();
 
             setTitle('');
